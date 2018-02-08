@@ -8,6 +8,7 @@
    - if file has large size => content of file might be not fitted to memory => external merge sort can be used to solve this problem
 2. nature of input data
     - If values of key column are unique with high probability (like guids) =>  hashmap-based algorithm will be storing a key for each value, thus spanning a memory for the size of the whole input file.
+    - If contents of key column are known to be limited to some limited amount of possible values => then even for large files, not fitted in memory, we can use hashmap
     
 
 #### External merge sort
