@@ -11,7 +11,6 @@ namespace DuplicatesInCSV
         public OperationStatus Run(string filePath, string columnName)
         {
             // validate file name
-            
             var isValid = FileUtils.FileIsValid(filePath);
             if (!isValid.IsSuccess)
             {

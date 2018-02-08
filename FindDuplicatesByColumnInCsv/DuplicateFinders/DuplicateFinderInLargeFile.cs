@@ -212,7 +212,7 @@ namespace DuplicatesInCSV
                 }
                 catch(Exception ex)
                 {
-
+                    //TODO                    
                 }
             }
         }

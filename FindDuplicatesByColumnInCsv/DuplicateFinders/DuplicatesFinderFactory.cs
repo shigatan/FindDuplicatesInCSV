@@ -29,7 +29,7 @@ namespace DuplicatesInCSV
             }
             else
             {
-                // create class implemented sorting using Sorted Hash Map
+                // create class implemented sorting using Hash Map
                 duplicatesFinder = new DuplicatesFinderInFile(filePath, columnIndex, new ConsoleOutputWriter());
             }
             return duplicatesFinder;

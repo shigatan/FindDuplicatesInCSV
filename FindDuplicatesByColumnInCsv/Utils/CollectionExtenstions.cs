@@ -61,7 +61,6 @@ namespace DuplicatesInCSV
                 return default(T);
             else
                 return source[index];
-
         }
     }
 }

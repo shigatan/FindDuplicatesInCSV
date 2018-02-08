@@ -23,14 +23,11 @@ namespace DuplicatesInCSV
             this.outputWriter = outputWriter;
         }
 
-        
         public abstract void FindDuplicates();
 
-        public virtual void Print(string rowWithDplicatedColValue)
+        protected virtual void Print(string rowWithDplicatedColValue)
         {
             outputWriter.Print(rowWithDplicatedColValue);
         }
-
-       
     }
 }
