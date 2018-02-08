@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindDuplicatesByColumnInCsv", "FindDuplicatesByColumnIsCsv\FindDuplicatesByColumnInCsv.csproj", "{A7BACD98-59A4-4198-92F3-203BAE0C0815}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindDuplicatesByColumnInCsv.Test", "FindDuplicatesByColumnInCsv\FindDuplicatesByColumnInCsv.Test.csproj", "{3772F5BB-1CAC-4308-A0A0-24586328C23C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7BACD98-59A4-4198-92F3-203BAE0C0815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7BACD98-59A4-4198-92F3-203BAE0C0815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7BACD98-59A4-4198-92F3-203BAE0C0815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7BACD98-59A4-4198-92F3-203BAE0C0815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3772F5BB-1CAC-4308-A0A0-24586328C23C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3772F5BB-1CAC-4308-A0A0-24586328C23C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3772F5BB-1CAC-4308-A0A0-24586328C23C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3772F5BB-1CAC-4308-A0A0-24586328C23C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EA35368-FAEF-4319-BF17-01E843E5CA5B}
+	EndGlobalSection
+EndGlobal
