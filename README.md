@@ -1,7 +1,7 @@
 # App allows to find rows in csv file with duplicate Values by specified column 
 
 ## Algorithm
-Search duplicates can be considered as task of sorting:
+Search duplicates can be solved in 2 steps:
 - sorting input data
 - go through sorted data and output only duplicated
 
@@ -10,7 +10,7 @@ Search duplicates can be considered as task of sorting:
    - if file has small size => sorting can be performed in memory. 
    - if file has large size => content of file might be not fitted to memory => external merge sort can be used to solve this problem
 2. nature of input data
-    If values of key column are unique with high probability (like guids) =>  hashmap-based algorithm will be storing a key for each value, thus spanning a memory for the size of the whole input file.
+   - If values of key column are unique with high probability (like guids) =>  hashmap-based algorithm will be storing a key for each value, thus spanning a memory for the size of the whole input file.
     
 #### Sorting in memory
 - can be implemented using well known algorithm. 
