@@ -69,12 +69,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FindDuplicatesByColumnIsCsv\FindDuplicatesByColumnInCsv.csproj">
-      <Project>{A7BACD98-59A4-4198-92F3-203BAE0C0815}</Project>
+    <ProjectReference Include="..\FindDuplicatesByColumnInCsv\FindDuplicatesByColumnInCsv.csproj">
+      <Project>{a7bacd98-59a4-4198-92f3-203bae0c0815}</Project>
       <Name>FindDuplicatesByColumnInCsv</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

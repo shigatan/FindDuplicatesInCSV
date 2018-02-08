@@ -85,6 +85,32 @@ namespace DuplicatesInCSV
             return sortedChunkFilePaths;
         }
 
+        private IDictionary<string, List<string>> ReadFileDataToSortedHashMap(string filePath, int keyColumnIndex, bool toMissHeader = true)
+        {
+            var sortedHashMap = new SortedDictionary<string, List<string>>();
+
+            using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            using (BufferedStream bs = new BufferedStream(fs))
+            using (StreamReader sr = new StreamReader(bs))
+            {
+                string line;
+                if (toMissHeader)
+                {
+                    line = sr.ReadLine();
+                    toMissHeader = false;
+                }
+                while ((line = sr.ReadLine()) != null)
+                {
+                    var columnValue = line.Split(',').SafeGetByIndex(keyColumnIndex);
+                    if (!string.IsNullOrEmpty(columnValue))
+                    {
+                        sortedHashMap.AddOrUpdate(columnValue, line);
+                    }
+                }
+            }
+            return sortedHashMap;
+        }
+
         private string SortChunk(string chunkFilePath, int keyColumnIndex, bool isFirstChunk)
         {
             var sortedData = ReadFileDataToSortedHashMap(chunkFilePath, keyColumnIndex, isFirstChunk);

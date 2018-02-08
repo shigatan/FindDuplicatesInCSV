@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DuplicatesInCSV;
 using Moq;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using DuplicatesInCSV;
 
 namespace FindDuplicatesByColumnInCsv
 {
