@@ -8,15 +8,15 @@ Search duplicates can be considered as task of sorting:
 #### Concerns
 1. file size 
    - if file has small size => sorting can be performed in memory. 
-    - if file has large size => content of file might be not fitted to memory => external merge sort can be used to solve this problem
+   - if file has large size => content of file might be not fitted to memory => external merge sort can be used to solve this problem
 2. nature of input data
-    - if value of key column is text => in this case the hash of text could be used
+    If values of key column are unique with high probability (like guids) =>  hashmap-based algorithm will be storing a key for each value, thus spanning a memory for the size of the whole input file.
     
 #### Sorting in memory
 - can be implemented using well known algorithm. 
 I used Sorted Hash Map. Time complexity of insert entry to Sorted Hash Map will be O(log n). Extra space O(n). 
 
-#### Extra merge sort
+#### External merge sort
 - Step1. divide file into chunks
 - Step2. sort each chunk and save result of sorting into temp file
 - Step3. read limited piece of data from each chunk file. In my implementation each chunk has associsated queue and I read data to these queues.
