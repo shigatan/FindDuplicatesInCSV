@@ -12,10 +12,10 @@
     
 
 #### External merge sort
-- Step1. divide file into chunks
-- Step2. sort each chunk and save result of sorting into temp file
+- Step1. Divide file into chunks fittable into memory (size can be adjusted)
+- Step2. Sort each chunk and save result of sorting into temp file
 		 Sorting can be implemented using well known algorithm. I used Sorted Hash Map. Time complexity of insert entry to Sorted Hash Map will be O(log n). Extra space O(n).
-- Step3. read limited piece of data from each chunk file. In my implementation each chunk has associsated queue and I read data to these queues.
+- Step3. Read limited piece of data from each chunk file. In my implementation each chunk has associsated queue and I read data to these queues.
 - Step4. Compare first values in queues. Find queue with minimum value - target value
 - Step5. Started from this queue push element to output while value are equal target value. When elements are finished grab new piece of data from file or move to next queue. 
 - Step6. When all queues have no values to output (== targe value) go to step 4. 
