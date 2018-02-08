@@ -4,7 +4,7 @@
 
 #### Concerns
 1. file size 
-   - if file has small size => go through data and put data to hashmap to count occurrences of the target column values, output rows that we've met before
+   - if file has small size => go through data and put data to hashmap to count occurrences of the target column values, output rows that we've met before. Time complexity O(n), Space complexity O(n)
    - if file has large size => content of file might be not fitted to memory => external merge sort can be used to solve this problem
 2. nature of input data
     - If values of key column are unique with high probability (like guids) =>  hashmap-based algorithm will be storing a key for each value, thus spanning a memory for the size of the whole input file.
