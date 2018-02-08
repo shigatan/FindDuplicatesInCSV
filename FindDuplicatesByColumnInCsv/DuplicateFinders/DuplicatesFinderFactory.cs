@@ -10,7 +10,7 @@ namespace DuplicatesInCSV
     {
         /// <summary>
         /// create duplicate finder depends on size of file
-        /// if file has small size this task can be solved without concerns about memory using Sorted Hash Map => O(n + logn)
+        /// if file has small size this task can be solved without concerns about memory using Hash Map => O(n)
         /// if file has large size it can not be fitted to memory and task can be solved using external merge sort algorithm.
         /// </summary>
         /// <param name="filePath"></param>
