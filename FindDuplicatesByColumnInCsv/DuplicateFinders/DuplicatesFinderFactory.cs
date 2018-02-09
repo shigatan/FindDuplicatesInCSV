@@ -18,7 +18,7 @@ namespace DuplicatesInCSV
         /// <returns></returns>
         public static DuplicatesFinder Create(string filePath, int columnIndex)
         {
-            const int LargeFileSizeThreasholdInMb = 25 * 1024; // can be configured
+            const int LargeFileSizeThreasholdInMb = 900 * 1024; // can be configured
 
             bool isLargeFile = FileUtils.isLargegFile(filePath, LargeFileSizeThreasholdInMb);
             DuplicatesFinder duplicatesFinder = null;

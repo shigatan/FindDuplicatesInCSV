@@ -12,15 +12,12 @@ namespace DuplicatesInCSV
     /// </summary>
     public class DuplicatesFinderInLargeFile : DuplicatesFinder
     {
-
-        //const int ChunkSizeInMb = 100 * 1024;
-        //const int ReadBufferSizeInBytes = 10 * 1024;
-
+        const int RowCountToWrite = 5000; // can be configured
+        //const int ChunkSizeInBytes = 5 * 1024 * 1024;  
+        const int ChunkSizeInBytes = 100 * 1024; // can be configured
+        
         private readonly int columnCount;
-
-        const int ChunkSizeInBytes = 5 * 1024 * 1024;  // can be configured
         private int ReadBufferSizeInBytes;
-        const int RowCountToWrite = 5000;
                 
         public DuplicatesFinderInLargeFile(string csvFilePath, int keyColumnIndex, IOutputWriter writer) : base(csvFilePath, keyColumnIndex, writer)
         {
